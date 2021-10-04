@@ -1,10 +1,8 @@
 /* 
 	block styles for group here,
-	just that.
 */
-.wp-block-group {
-	@include clearfix();
 
+.wp-block-group {
 	&.is-style-card-outlined {
 		border: 1px solid $grey_4;
 		padding: $margin_2x;
@@ -17,5 +15,4 @@
 			max-width: calc(100% + #{$margin_4x});
 		}
 	}
-	
 }

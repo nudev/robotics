@@ -1,100 +1,51 @@
 /* 
-
-	NU Patterns
-	- Feature Category
-	- - Pattern "is_type_a"
-
-	? This file takes the KNOWN pattern; which is intended to be developed into a LOCKED TEMPLATE, and styles it.
-	? This is tightly coupled and will break on changes in the editor
-	? Until we move to start really templating; this should be AS MINIMAL AS POSSIBLE.
-
-	* prebuilding patterns is very easily and flexible; and we can massage the 'correct' choice of blocks this way before 'hardening' things into a template.
-	
+	Block Patterns
+	- Features
+	- - "is_type_a"
 */
 
-// ? this selector can not change; it represents this pattern literally
+//
 .nu_pattern-is_feature--is_type_a {
-	// ? idk
-	padding: $margin_4x;
-	padding-bottom: 0;
-
-	// ? idk
+	
 	> .wp-block-columns {
-		margin: 0;
+		margin: $margin_2x 0 0 0;
 		&:first-child {
-			.wp-block-column:last-child {
-				display: flex;
-
-				.wp-block-group {
-					@media screen and (min-width: 781px) {
-						margin-left: auto;
-						margin-right: 0 !important;
-						min-width: 60%;
-					}
-	
-					@media screen and (max-width: 781px) {
-						width: 100%; 
-
-						> * {
-								margin-left: 0 !important; 
-						}
-					}
-				}
-			}
-		}
-		.wp-block-buttons {
-			margin-bottom: -#{$margin_4x};
-			flex-wrap: nowrap;
-
-			@media screen and (max-width: 640px) {
-
-				display: flex; 
-				flex-wrap: wrap; 
-				flex-direction: column; 
-	
-				margin-bottom: #{$base-margin}; 
-				
-				> .wp-block-button {
-					margin: 5px 0; 
-				}
-	
-				.wp-block-button.is-style-card .wp-block-button__link {
-					padding: 32px; 
-				}
-		
-				// ? address issues w/ the right column not being properly aligned if they remain after above tweaks
-				// ? also fix the next section being tucked up too close!
-			}
-
-			// ? this makes the "overflowing" buttons have a solid background on hover, for readability
-			// ? (this is a BUG in the button block overall!)
-			> .wp-block-button.is-style-card {
-				.wp-block-button__link {
-					&:hover,
-					&:focus {
-						background-color: #fff;
-					}
-					&:active {
-					}
-				}
-			}
+			margin: 0;
 		}
 	}
 
-	@media screen and (max-width: 960px) {
-		padding: $margin_2x;
+	&.has-background {
+		padding: $margin_4x; // increase default has-background padding
 		padding-bottom: 0;
-		> .wp-block-columns:last-child {
-			> .wp-block-column:last-child {
-				margin-left: 0;
-				flex-basis: 100% !important;
-			}
+		@media screen and (max-width: 781px) {
+			padding: $margin_2x;
+			padding-bottom: $margin_2x;
 		}
-
-		// ? address issues w/ the right column not being properly aligned
 	}
 
-	
+	// a grouping of paragraph blocks used as links; rather than a navmenu ( for editor simplicty )
+	.wp-block-group.feature-is_type_a-navlinks {
+		min-width: 220px;
+		@media screen and (min-width: 782px) {
+			margin-left: $margin_4x;
+		}
+		p.is-style-links-have-arrows {
+			margin: $base-margin 0 0 0;
+		}
+	}
 
-	
+	.wp-block-buttons {
+		// force a single row, until we force a single column
+		@media screen and (min-width: 782px) {
+			margin-bottom: -#{$margin_4x} !important;
+			flex-wrap: nowrap;
+		}
+		@media screen and (max-width: 781px) {
+			flex-flow: column nowrap;
+			.wp-block-button__link {
+				width: 100%;
+			}
+		}
+	}
+
 }

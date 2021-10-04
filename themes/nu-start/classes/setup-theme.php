@@ -384,6 +384,7 @@ class SetupTheme
 		add_theme_support( 'align-wide' );								// enable wide alignment for blocks
 		add_theme_support( 'wp-block-styles' );							//  enable fully opinionated block styles
 		add_theme_support( 'custom-spacing' );
+		// 
 		remove_theme_support( 'core-block-patterns' ); 					// remove the "patterns" library
 
 		/* 
@@ -397,8 +398,10 @@ class SetupTheme
 				For example, if you write body { ... } in your editor style, this is rewritten to .editor-styles-wrapper { ... }"
 			! This also means that you should not target any of the editor class names directly.
 		 */
+		add_theme_support( 'editor-gradient-presets', [] ); // remove the preset gradients in wp core
 		add_theme_support( 'editor-styles' );
-		add_editor_style( get_template_directory_uri() . '/__precomp/build/css/editor-style.css' );
+		// add_editor_style( get_template_directory_uri() . '/__precomp/build/css/editor-style.css' );
+		add_editor_style( '__precomp/build/css/editor-style.css' );
 		
 		/* 
 			! Note see @link '/theme.json' for most of what was here

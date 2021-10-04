@@ -14,43 +14,54 @@
 
 //
 .nu_pattern-is_feature--is_type_b {
-
 	&.has-background {
-		padding: 0;		// remove padding to flush image with edges
+		padding: 0; // remove padding to flush image with edges
 	}
 
-	p.is-style-links-have-arrows {
-		a:after {
-			content:'\e315';
-			font-size: 20px;
+	p {
+		margin-top: $base-margin;
+		margin-bottom: $base-margin;
+
+		&.is-style-links-have-arrows {
+			a:after {
+				content: "\e315";
+				font-size: 20px;
+			}
 		}
 	}
 
 	.wp-block-image {
 		margin-bottom: 0; // remove hanging margins
 	}
-	
 
 	> .wp-block-columns {
-		margin-bottom: 0;		// remove hanging margin
+		margin-bottom: 0; // remove hanging margin
 		> .wp-block-column:first-child {
-			margin: $margin_4x 0;	// pad edge of content column
+			margin: $margin_4x 0; // pad edge of content column
 			> .wp-block-group {
-				&:not(:first-child){
+				&:not(:first-child) {
 					margin: $margin_2x 0 0 0;
 				}
 			}
 		}
+		> .wp-block-column:last-child {
+			flex: 0 1 45% !important;
+			
+		}
 	}
-
-	
 
 	@media screen and (max-width: 1280px) {
 		// ? enforce cover height; min-height:100% set in cms
 		.wp-block-cover {
 			height: 300px;
 		}
-		
+
+		.wp-block-group > .wp-block-columns {
+			max-width: 95%;
+			margin-left: $base-margin;
+			margin-right: $base-margin;
+		}
+
 		// ? break early
 		> .wp-block-columns {
 			flex-flow: column nowrap;
@@ -62,7 +73,7 @@
 			}
 		}
 	}
-	@media screen and ( max-width: 960px ) {
+	@media screen and (max-width: 960px) {
 		.wp-block-columns .wp-block-columns {
 			flex-flow: row nowrap !important;
 			.wp-block-column {
@@ -82,10 +93,14 @@
 				margin-right: $margin_2x;
 			}
 		}
+
+		.wp-block-columns:not(.is-not-stacked-on-mobile)
+			> .wp-block-column:not(:only-child) {
+			margin-bottom: 0;
+		}
 	}
 
-	@media screen and ( max-width: 640px ) {
-		
+	@media screen and (max-width: 640px) {
 		> .wp-block-columns > .wp-block-column:first-child {
 			margin-bottom: 0;
 		}

@@ -8,26 +8,30 @@
 	 *   ... code in here will run after jQuery says document is ready
 	 */
 	$(function () {
+		//
+		$(".wp-block-nu-blocks-accordion").on(
+			"click",
+			".wp-block-nu-blocks-accordion-item",
+			function (e) {
+				$(e.currentTarget)
+					.siblings()
+					.find("details[open]")
+					.removeAttr("open");
+			}
+		);
 
-		// 
-		$('.wp-block-nu-blocks-accordion').on('click', '.wp-block-nu-blocks-accordion-item', function(e){
-			$(e.currentTarget).siblings().find('details[open]').removeAttr('open');
-		});
-
-			
-
-		setTimeout(function(){
-
-			$('.is-special-fadein strong').animate({
-				opacity: 1,
-				left: 0
-			}, 1000, function(){
-				// animation callback
-			});
-
-		}, 2000 );
-
-
+		setTimeout(function () {
+			$(".is-special-fadein strong").animate(
+				{
+					opacity: 1,
+					left: 0,
+				},
+				1000,
+				function () {
+					// animation callback
+				}
+			);
+		}, 2000);
 
 		$("#nu__cookiewarning").on(
 			"click",
@@ -42,8 +46,7 @@
 			$("#nu__cookiewarning").remove();
 		});
 
-		if (localStorage.getItem("acceptCookies") !== "true"
-		) {
+		if (localStorage.getItem("acceptCookies") !== "true") {
 			$("#nu__cookiewarning").show();
 		} else {
 			$("#nu__cookiewarning").remove();
@@ -78,11 +81,10 @@
 			}
 		}
 
-
-		$('.wp-block-image.is-video-placeholder a').magnificPopup({
-			type: 'iframe'
+		$(".wp-block-image.is-video-placeholder a").magnificPopup({
+			type: "iframe",
 		});
-		
+
 		//
 		$(
 			".wp-block-button.is-style-playhead .wp-block-button__link"
@@ -97,10 +99,5 @@
 		$(".js__magnific.mfp-iframe .wp-block-button__link").magnificPopup({
 			type: "ajax",
 		});
-
-
-
-
-
 	});
 })(window.jQuery, window, document);

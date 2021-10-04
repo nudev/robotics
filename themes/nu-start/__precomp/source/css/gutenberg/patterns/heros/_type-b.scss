@@ -12,45 +12,60 @@
 	
 */
 
-// 
+//
 .nu_pattern-is_hero--is_type_b {
-	
-	h1 {
-		margin-top: 0; 
+	// ? leave the min height; but always fill vertical space
+	.wp-block-cover[style*="min-height"] {
+		height: 100% !important;
 	}
 
-	margin-top: 0;
-	
+
+	.wp-block-columns > .wp-block-column {
+		&:last-child {
+			flex: 1 0 50%;
+		}
+	}
+
 	border-bottom: 1px solid $grey_4;
 	border-top: 1px solid $grey_4;
 
 	> .wp-block-columns {
 		margin-bottom: 0;
+		&.are-vertically-aligned-center {
+			align-items: stretch;
+		}
+		@media screen and (max-width: 780px) {
+			position: relative;
+			> .wp-block-column {
+				&:last-child {
+					position: absolute;
+					top: 0;
+					left: 0;
+					width: 100%;
+					height: 100%;
+					margin: 0;
+				}
+				&:first-child {
+					position: relative;
+					z-index: 1;
+					.wp-block-group {
+						margin: $margin_4x auto;
+					}
+				}
+			}
+		}
 	}
 
 	figure {
 		margin-bottom: 0;
 	}
 
-	.wp-block-column {
-		
-		// min-height: 
-		
-		&:first-child {
-			.wp-block-group {
-				margin: 0 10%;
-			}
-		}
-
+	h1,
+	h2,
+	h3,
+	h4,
+	h5,
+	h6 {
+		line-height: 1;
 	}
-	
-}
-
-.blocks--wrapper > .nu_pattern-is_hero--is_type_b {
-
-	&:first-child {
-		margin-top: 0;
-	}
-	
-	
 }

@@ -5,15 +5,8 @@
 // todo: update this stuff to above syntax; but fix linting first?
 // ? this is all es5 native quick work
 wp.domReady(function () {
-	
-
 	wp.blocks.unregisterBlockStyle("core/pullquote", "solid-color");
 	wp.blocks.unregisterBlockStyle("core/quote", "large");
-
-	// wp.blocks.unregisterBlockStyle( 'core/button', 'default' );
-	// wp.blocks.unregisterBlockStyle( 'core/button', 'outline' );
-	// wp.blocks.unregisterBlockStyle( 'core/button', 'fill' );
-
 	wp.blocks.unregisterBlockType("bcn/breadcrumb-trail");
 
 	// * disable certain core blocks
@@ -22,27 +15,11 @@ wp.domReady(function () {
 	wp.blocks.unregisterBlockType("core/html");
 	wp.blocks.unregisterBlockType("core/code");
 	wp.blocks.unregisterBlockType("core/preformatted");
-
-	// ? design category
-	// wp.blocks.unregisterBlockType("core/more");
-	// wp.blocks.unregisterBlockType("core/nextpage");
-
-	// disable various full site editing blocks
-	// wp.blocks.unregisterBlockType("core/site-logo");
-	// wp.blocks.unregisterBlockType("core/site-tagline");
-	// wp.blocks.unregisterBlockType("core/site-title");
-	// wp.blocks.unregisterBlockType("core/loginout");
-
-	// wp.blocks.unregisterBlockType( 'core/spacer' );
-	// wp.blocks.unregisterBlockType( 'core/separator' );
-
 	// ? media category
 	wp.blocks.unregisterBlockType("core/file");
 	wp.blocks.unregisterBlockType("core/audio");
 
 	// ? embed has an index file here to disable all
-	// wp.blocks.unregisterBlockType( 'core/embed' );
-	// wp.blocks.unregisterBlockType( 'core/embed' );
 	var embed_variations = [
 		"amazon-kindle",
 		"animoto",
@@ -92,8 +69,4 @@ wp.domReady(function () {
 	wp.blocks.unregisterBlockType("core/tag-cloud");
 	wp.blocks.unregisterBlockType("core/search");
 
-	// ? useful blocks just here for easy toggle
-	// wp.blocks.unregisterBlockType( 'core/wpforms' );
-	// wp.blocks.unregisterBlockType( 'core/shortcode' );
-	// wp.blocks.unregisterBlockType( 'core/social-links' );
 });

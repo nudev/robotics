@@ -11,7 +11,7 @@
 		> *:first-child:not(.wp-block-pullquote__citation) {
 			position: relative;
 			&:before {
-				content: url('/wp-content/themes/nu-start/__lib/icons/quotes.svg');
+				content: url("/wp-content/themes/nu-start/__lib/icons/quotes.svg");
 				display: block;
 				position: absolute;
 				top: 50%;
@@ -20,14 +20,13 @@
 				color: var(--wp--preset--color--dark-blue);
 			}
 		}
-   
+
 		p {
 			@include font-size(1.8rem);
 			line-height: 1.375;
 		}
-   }
+	}
 }
-
 
 .wp-block-pullquote__citation {
 	text-transform: none;

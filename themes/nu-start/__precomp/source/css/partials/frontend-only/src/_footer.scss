@@ -34,22 +34,21 @@ footer.site-footer {
 		}
 	}
 
-	>section {
+	> section {
 		display: flex;
 		flex-flow: row wrap;
-		align-items: center;
+		align-items: flex-start;
 		margin: 0 auto;
-		
-		width: 80%;
-		
 
-		>div {
+		width: calc(100% - $margin_8x);
+
+		> div {
 			flex: 0 1 auto;
 			margin-left: $margin_8x;
 
 			@media screen and (max-width: 1280px) {
 				margin-left: $margin_4x;
-				
+
 				&.footer-sidebar {
 					flex-basis: 100%;
 					margin-left: 0;
@@ -58,7 +57,6 @@ footer.site-footer {
 			}
 			@media screen and (max-width: 960px) {
 				margin-left: $margin_2x;
-
 			}
 
 			&:first-child {
@@ -66,15 +64,13 @@ footer.site-footer {
 				flex: 1 1 auto;
 			}
 		}
-		@media screen and ( max-width: 960px ) {
-			width: 90%;
-
+		@media screen and (max-width: 960px) {
 			flex-flow: column nowrap;
 			align-items: flex-start;
 			.footer-sidebar {
 				align-self: flex-start;
 			}
-			
+
 			> div {
 				margin-top: $margin_4x;
 				&:first-child {
@@ -92,12 +88,10 @@ footer.site-footer {
 					}
 				}
 			}
-			
 		}
 	}
 
 	.footer-siteinfo {
-
 		.address,
 		.contact,
 		.social {
@@ -156,7 +150,6 @@ footer.site-footer {
 	}
 
 	.navlinks {
-
 		// ?reset styles for any menu item
 		li {
 			margin: 0 0 ($base-margin * 0.5) 0;
@@ -191,22 +184,22 @@ footer.site-footer {
 			flex-flow: row wrap;
 
 			// ? handle top level nav items
-			>li {
+			> li {
 				margin: 0 $margin_2x $margin_2x 0;
-				@media screen and ( max-width: 960px ) {
+				@media screen and (max-width: 960px) {
 					margin: 0 $base-margin $base-margin 0;
 				}
 
 				&.current_page_item,
 				&.current-page-ancestor {
-					>a {
+					> a {
 						color: rgba($white, 1);
 						border-left: 5px solid rgba($white, 1);
 					}
 				}
 
 				// ? top level nav links stand out
-				>a {
+				> a {
 					// TODO: big  font here
 					// text-transform: uppercase;
 					font-weight: bold;
@@ -232,12 +225,12 @@ footer.site-footer {
 		// ? any level of menu item with children
 		// ?
 		li.menu-item-has-children {
-			>.sub-menu {
+			> .sub-menu {
 				margin: $base-margin 0 0 0;
 
-				>li {
+				> li {
 					&.current_page_item {
-						>a {
+						> a {
 							color: rgba($white, 1);
 							border-left: 5px solid rgba($white, 1);
 						}
@@ -247,14 +240,12 @@ footer.site-footer {
 		}
 	}
 
-
 	.footer-sidebar {
 		align-self: flex-end;
 	}
 
 	.nu__footer-sidebar.widget_block {
 		form.wpforms-form {
-
 			.wpforms-field-container,
 			.wpforms-submit-container {
 				display: inline-block;
@@ -298,9 +289,6 @@ footer.site-footer {
 		}
 	}
 }
-
-
-
 
 /**
 *		Global  Footer

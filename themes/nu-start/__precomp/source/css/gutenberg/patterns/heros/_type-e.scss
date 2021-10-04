@@ -42,5 +42,8 @@
 		}
 	}
 	
+	.wp-block-cover.alignfull.has-background-dim-30.has-black-background-color.has-background-dim.cover_tucks_next_block > .wp-block-cover__inner-container {
+		margin-bottom: $base-margin * 3; 
+	}
 
 }

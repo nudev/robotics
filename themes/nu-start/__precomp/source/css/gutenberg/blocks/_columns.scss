@@ -1,62 +1,55 @@
 /* 
-	block styles for group here,
-	just that.
+	Columns Block
 */
 
-.wp-block-columns {
-
-	&.is-style-flex-justify-space-between {
+.wp-block-columns {	
+	// ? custom style classes below
+	// just a shim here to test this kind of feature
+	&.is-style-justify-space-between {
 		justify-content: space-between;
-	}
-
-
-
-	// ? if a columns block or a column block within it has a background
-	.wp-block-column.has-background,
-	&.has-background {
-		padding: $margin_2x;
-	}
-	
-	
-}
-
-.wp-block-column {}
-
-// extra specificity
-.wp-block-columns {
-	.wp-block-column {}
-}
-
-
-
-
-
-
-// ! there is no vertical margin in WP-Core (at this time) for the fully stacked view
-
-@media screen and (max-width: 640px) {
-	.wp-block-columns {
-		>.wp-block-column {
-			margin: $margin_2x 0 0 0;
-
-			&:first-child {
-				margin: 0;
-			}
+		> .wp-block-column {
+			flex: 0 1 auto;
 		}
 	}
 }
 
-// ! this breakpoint is used by WP-Core and must be overridden
-@media (min-width: 600px) and (max-width: 781px) {
-	.wp-block-columns:not(.is-not-stacked-on-mobile)>.wp-block-column:not(:only-child) {
-		// ? even margin top/bot balances things out, even when the container has padding (no hanging margins, its half on both sides)
-		margin-top: $base-margin * 0.5;
-		margin-bottom: $base-margin * 0.5;
-		// ? "stack" should fill width; but above 781 "stacked" could still be two columns is my interpretation.
-		flex-grow: 1;
+.wp-block-column {
+	// flush bottom edge
+	> *:last-child {
+		margin-bottom: 0;
+	}
+	// flush top edge
+	> *:first-child {
+		margin-top: 0;
+	}
+}
 
-		// todo: well, lets try some things below to "stack earlier"
-		flex-basis: auto !important;
-		margin-left: 0;
+.wp-block-columns:not(.is-not-stacked-on-mobile) > .wp-block-column {
+	
+	@media screen and (min-width: 782px) {
+		// flex-basis: auto;
+		// flex: 1;
+	}
+	@media screen and (max-width: 781px) {
+		&:not(:only-child){
+			margin: $margin_2x 0 0 0;
+			flex: 1 1 100% !important;
+		}
+		// 
+		&:first-child {
+			margin: 0;
+		}
+	}
+}
+
+
+// adjustments for has-background padding (see about fixing in theme.json etc)
+.wp-block-columns,
+.wp-block-column {
+	&.has-background{
+		padding: $margin_2x;
+		@media screen and ( max-width: 781px ){
+			padding: $base-margin;
+		}
 	}
 }
