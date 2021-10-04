@@ -1,0 +1,20 @@
+div.wp-block-group {
+	&.nu_pattern-is_hero_banner--type-c {
+
+		h2 {
+			margin: $base-margin 0;
+		}
+
+
+		// reposition the cover container to the bottom, full width
+		.wp-block-cover__inner-container {
+			position: absolute;
+			bottom: 0;
+			left: 0;
+			width: 100%;
+			max-width: 100%;
+			margin: 0;
+		}
+
+	}
+}

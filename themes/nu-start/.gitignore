@@ -1,0 +1,6 @@
+# capture everything except
+
+
+
+# ignore node dependency directories
+node_modules/
