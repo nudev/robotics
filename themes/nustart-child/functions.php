@@ -144,7 +144,7 @@ add_filter( 'login_headertext', 'my_login_logo_url_title' );
 add_filter('login_errors', 'login_error_override');
 add_action('login_head', 'my_login_head');
 add_action( 'init', 'login_checked_remember_me' );
-add_action('admin_head', 'htx_custom_logo');
+//add_action('admin_head', 'htx_custom_logo');
 
 
 

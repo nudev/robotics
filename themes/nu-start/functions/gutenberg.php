@@ -1,5 +1,5 @@
 <?php
-/* 
+/*
 
 */
 
@@ -7,7 +7,7 @@
 add_filter( 'block_categories_all', 'nu__manage_block_categories', 10, 2 );
 
 // restrict allowed blocks for certain post types
-add_filter('allowed_block_types_all', 'nu__manage_allowed_blocks', 10, 2);
+// add_filter('allowed_block_types_all', 'nu__manage_allowed_blocks', 10, 2);
 
 // register additional block styles
 add_action( 'init', 'nu__register_block_styles' );
@@ -61,7 +61,7 @@ function nu__customize_rendering_blocks( $block_content, $block ) {
 
 
 		error_log(print_r($block, true));
-		
+
     }
 
 
@@ -125,7 +125,7 @@ if( !function_exists( 'nu__register_block_types' ) ){
 
 
 		return $allowed_block_types;
-		
+
 	}
 }
 
@@ -212,7 +212,7 @@ if( !function_exists( 'nu__register_block_styles' ) ){
 			)
 		);
 
-		// 
+		//
 		register_block_style(
 			'core/group',
 			array(
@@ -238,7 +238,7 @@ if( !function_exists( 'nu__register_block_styles' ) ){
 
 
 if( !function_exists('nu__manage_block_categories') ){
-	
+
 	/**
 	 * add / remove block editor categories
 	 *
@@ -247,7 +247,7 @@ if( !function_exists('nu__manage_block_categories') ){
 	 * @return void
 	 */
 	function nu__manage_block_categories( $block_categories, $block_editor_context  ) {
-	
+
 		// create the nu-blocks category
 		return array_merge(
 			$block_categories,
@@ -265,7 +265,7 @@ if( !function_exists('nu__manage_block_categories') ){
 			)
 		);
 	}
-	
+
 }
 
 
@@ -276,13 +276,13 @@ if( !function_exists('nu__register_block_pattern_categories') ){
 	 * register custom categories for patterns
 	 *
 	 * @return void
-	 */	
+	 */
 	function nu__register_block_pattern_categories(){
-		
+
 		$nu_pattern_categories = [
-			// 
+			//
 			'dev-helpers' => ['label' => __('Dev Helpers', 'nu-start')],
-			// 
+			//
 			'heroes' => ['label' => __('Heroes', 'nu-start')],
 			'partners' => ['label' => __('Partners', 'nu-start')],
 			'featured-people' => ['label' => __('Featured People', 'nu-start')],
@@ -290,7 +290,7 @@ if( !function_exists('nu__register_block_pattern_categories') ){
 			'stat-highlights' => ['label' => __('Stat Highlights', 'nu-start')],
 			'case-studies' => ['label' => __('Case Studies', 'nu-start')],
 			'testimonials' => ['label' => __('Testimonials', 'nu-start')],
-			// 
+			//
 			'event-templates' => ['label' => __('Event Templates', 'nu-start')],
 			'person-templates' => ['label' => __('Person Templates', 'nu-start')],
 		];
@@ -298,7 +298,7 @@ if( !function_exists('nu__register_block_pattern_categories') ){
 		foreach( $nu_pattern_categories as $category_name => $category_properties ) {
 			register_block_pattern_category( $category_name, $category_properties );
 		}
-		
+
 	}
 }
 
@@ -323,7 +323,7 @@ if( !function_exists('nu__enqueueCarouselAssets') ){
  */
 if( !function_exists('nu__reusable_blocks_in_admin_menu') ){
 	function nu__reusable_blocks_in_admin_menu() {
-	
+
 		add_menu_page(
 			'Reusable Blocks',
 			'Reusable Blocks',
@@ -333,11 +333,11 @@ if( !function_exists('nu__reusable_blocks_in_admin_menu') ){
 			'dashicons-editor-table',
 			'3.1'
 		);
-	
+
 	}
 }
 
 
 
-// 
+//
 ?>
