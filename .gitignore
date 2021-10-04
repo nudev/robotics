@@ -28,8 +28,8 @@ wp-rocket-config/
 debug.log
 advanced-cache.php
 uploads/
-#plugins/
-#mu-plugins/
+plugins/
+mu-plugins/
 
 *.bak
 
