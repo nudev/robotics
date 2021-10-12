@@ -4,7 +4,7 @@
  */
 //
 
-$guides['grid-item-news'] = '
+$guides['grid-item-event'] = '
 	<li class="grid-item%1$s%7$s%8$s">
 		<a href="%6$s" title="Read More about '.get_the_title( ).'">
 			%2$s
@@ -36,6 +36,8 @@ if( !empty(self::$fields) ){
 	$the_date_time = $instance::build_datetime_return_string();
 
 }
+
+$determined_permalink = !empty(self::$fields['custom_permalink_redirect']) ? self::$fields['custom_permalink_redirect'] : esc_url( get_the_permalink( ) );
 
 
 $item_style = !empty(self::$gridOptions['item_style']) ? self::$gridOptions['item_style'] : '';
@@ -69,13 +71,13 @@ if( !empty($item_style['image_dimensions']) ){
 
 
 $griditems_return .= sprintf(
-	$guides['grid-item-news'],
+	$guides['grid-item-event'],
 	' '.self::$post['post_type'],
 	has_post_thumbnail( ) ? '<figure>'.get_the_post_thumbnail( ).'</figure>' : '',
 	'<h4 class="post-title"><span>'.get_the_title( ).'</span></h4>',
 	$the_date_time,
 	'<p class="post-excerpt">'.get_the_excerpt( ).'</p>',
-	esc_url( get_the_permalink( ) ),
+	$determined_permalink,
 	$aspectRatio,
 	$orientationClass
 );

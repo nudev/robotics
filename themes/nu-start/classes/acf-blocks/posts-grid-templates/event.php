@@ -2,7 +2,7 @@
 /**
  *  global $post was declared already and will be cleaned up elsewhere
  */
-// 
+//
 
 $guides['grid-item-event'] = '
 	<li class="grid-item%1$s%7$s%8$s">
@@ -37,6 +37,8 @@ if( !empty(self::$fields) ){
 
 }
 
+$determined_permalink = !empty(self::$fields['custom_permalink_redirect']) ? self::$fields['custom_permalink_redirect'] : esc_url( get_the_permalink( ) );
+
 
 $item_style = !empty(self::$gridOptions['item_style']) ? self::$gridOptions['item_style'] : '';
 $aspectRatio = '';
@@ -59,7 +61,7 @@ if( !empty($item_style['image_dimensions']) ){
 		case 'tall':
 			$aspectRatio = ' has-tall-cover-image';
 			break;
-			
+
 			default:
 			# code...
 			$aspectRatio = '';
@@ -75,11 +77,11 @@ $griditems_return .= sprintf(
 	'<h4 class="post-title"><span>'.get_the_title( ).'</span></h4>',
 	$the_date_time,
 	'<p class="post-excerpt">'.get_the_excerpt( ).'</p>',
-	esc_url( get_the_permalink( ) ),
+	$determined_permalink,
 	$aspectRatio,
 	$orientationClass
 );
-	
 
-// 
+
+//
 ?>
