@@ -1,8 +1,8 @@
 <?php
 /**
- * 
+ *
  */
-// 
+//
 
 if( function_exists('acf_register_block_type') ):
 
@@ -40,7 +40,7 @@ if( function_exists('acf_register_block_type') ):
 		),
 		'active' => true,
 	));
-	
+
 endif;
 
 if( function_exists('acf_register_block_type') ):
@@ -80,7 +80,7 @@ if( function_exists('acf_register_block_type') ):
 		),
 		'active' => true,
 	));
-	
+
 endif;
 
 
@@ -114,7 +114,7 @@ if( function_exists('acf_register_block_type') ):
 		),
 		'active' => true,
 	));
-	
+
 endif;
 
 if( function_exists('acf_register_block_type') ):
@@ -153,7 +153,7 @@ if( function_exists('acf_register_block_type') ):
 		),
 		'active' => true,
 	));
-	
+
 endif;
 
 
@@ -193,7 +193,7 @@ if( function_exists('acf_register_block_type') ):
 		),
 		'active' => true,
 	));
-	
+
 endif;
 
 
@@ -234,7 +234,7 @@ if( function_exists('acf_register_block_type') ):
 		),
 		'active' => true,
 	));
-	
+
 endif;
 
 
@@ -275,7 +275,47 @@ if( function_exists('acf_register_block_type') ):
 		),
 		'active' => true,
 	));
-	
+
+endif;
+
+if( function_exists('acf_register_block_type') ):
+
+	acf_register_block_type(array(
+		'name' => 'nu-news',
+		'title' => 'News',
+		'description' => '',
+		'category' => 'nu-blocks',
+		'keywords' => array(
+		),
+		'post_types' => array(
+			0 => 'nu_events',
+		),
+		'mode' => 'preview',
+		'align' => '',
+		'align_content' => NULL,
+		'render_template' => get_template_directory(  ) . '/acf-blocks/news/news.php',
+		'render_callback' => '',
+		'enqueue_style' => get_template_directory_uri(  ) . '/acf-blocks/news/news.css',
+		'enqueue_script' => get_template_directory_uri(  ) . '/acf-blocks/news/news-min.js',
+		'enqueue_assets' => '',
+		'icon' => 'news',
+		'supports' => array(
+			'align' => array(
+				0 => 'left',
+				1 => 'right',
+				2 => 'center',
+				3 => 'wide',
+				4 => 'full',
+			),
+			'mode' => true,
+			'multiple' => true,
+			'jsx' => true,
+			'align_content' => false,
+			'anchor' => true,
+		),
+		'active' => true,
+	));
+
 endif;
 
 
@@ -316,9 +356,9 @@ if( function_exists('acf_register_block_type') ):
 		),
 		'active' => true,
 	));
-	
+
 endif;
 
 
-// 
+//
 ?>
