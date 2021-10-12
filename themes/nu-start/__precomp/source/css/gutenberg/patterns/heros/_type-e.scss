@@ -24,7 +24,7 @@
 
 		// 
 		> .wp-block-cover.cover_tucks_next_block {
-			margin-bottom: 0;
+			// margin-bottom: 0;
 			padding-bottom: $margin_8x;
 			+ .wp-block-group .wp-block-buttons {
 				width: 100%;
@@ -36,7 +36,7 @@
 				transform: translate(-50%, 50%);
 
 				.wp-block-button {
-					flex: 1 1 auto;
+					flex: 1 1 100%;
 				}
 			}
 		}

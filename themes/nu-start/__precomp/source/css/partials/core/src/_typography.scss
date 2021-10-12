@@ -3,7 +3,6 @@
 ?		
 */
 
-
 // reset body styling to brand
 body {
 	@extend %base_body_style;
@@ -94,6 +93,13 @@ a {
 	}
 	svg {
 		@extend %transition;
+	}
+}
+
+p {
+	margin: $base-margin 0 ($base-margin * 0.5) 0;
+	&:first-child {
+		margin: 0;
 	}
 }
 

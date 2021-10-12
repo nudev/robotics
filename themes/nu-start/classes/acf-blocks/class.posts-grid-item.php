@@ -39,6 +39,9 @@ class PostsGrid_Item
 			case 'nu_programs':
 				include( get_template_directory( ) . '/classes/acf-blocks/posts-grid-templates/program.php' );
 				break;
+			case 'nu_initiatives':
+				include( get_template_directory( ) . '/classes/acf-blocks/posts-grid-templates/initiative.php' );
+				break;
 			case 'page':
 				include( get_template_directory( ) . '/classes/acf-blocks/posts-grid-templates/is-page.php' );
 				break;

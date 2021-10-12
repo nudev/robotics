@@ -1,94 +1,48 @@
-/**
-*		Site  Footer
+/* 
+	Site Footer
 */
-//
-footer.site-footer {
-	margin: $margin_8x 0 0 0;
 
+//  resets for various elements in the footer
+footer.site-footer {
+	ul,
+	ol {
+		list-style-type: none;
+		list-style: none;
+		margin: 0;
+		padding: 0;
+		&.sub-menu {
+			padding-left: ($base-margin * 0.5);
+		}
+	}
+}
+
+// opinionated styles below
+footer.site-footer {
+	//
+	margin: $margin_8x 0 0 0;
 	@media screen and (max-width: 640px) {
 		margin: $margin_4x 0 0 0;
 	}
 
-	color: rgba($white, 0.8);
 	background-color: $black;
-	border: none 0;
-	border-top: 1px solid $grey_4;
-	padding: $margin_4x 0;
-	border-top: 1px solid #99a3b0;
-	border-bottom: 1px solid #99a3b0;
+	color: $white;
 
-	// ? not sure about this right here
-	ul,
-	ol {
-		list-style-type: none;
-	}
-
-	.navlinks {
-		ul {
-			margin: 0;
-			padding: 0;
-		}
-
-		.sub-menu {
-			// padding: 0 0 0 $base-margin;
-		}
-	}
-
+	//
 	> section {
+		//
+		margin: $margin_4x auto;
+		margin-top: 0;
+		width: calc(100% - $margin_8x);
+		//
 		display: flex;
 		flex-flow: row wrap;
 		align-items: flex-start;
-		margin: 0 auto;
+		justify-content: space-between; // forces outer groupings to l/r edges
+	}
 
-		width: calc(100% - $margin_8x);
-
-		> div {
-			flex: 0 1 auto;
-			margin-left: $margin_8x;
-
-			@media screen and (max-width: 1280px) {
-				margin-left: $margin_4x;
-
-				&.footer-sidebar {
-					flex-basis: 100%;
-					margin-left: 0;
-					margin-top: $margin_4x;
-				}
-			}
-			@media screen and (max-width: 960px) {
-				margin-left: $margin_2x;
-			}
-
-			&:first-child {
-				margin-left: 0;
-				flex: 1 1 auto;
-			}
-		}
-		@media screen and (max-width: 960px) {
-			flex-flow: column nowrap;
-			align-items: flex-start;
-			.footer-sidebar {
-				align-self: flex-start;
-			}
-
-			> div {
-				margin-top: $margin_4x;
-				&:first-child {
-					margin-top: 0;
-				}
-				margin-left: 0;
-				.navlinks {
-					margin-left: -10px;
-				}
-				.social {
-					> .nu__customsvg {
-						&:first-child {
-							margin-left: 0;
-						}
-					}
-				}
-			}
-		}
+	> section > div {
+		flex: 0 1 auto;
+		margin: $margin_4x 0 0 $margin_2x;
 	}
 
 	.footer-siteinfo {
@@ -104,8 +58,7 @@ footer.site-footer {
 				font-weight: 300;
 
 				&:hover,
-				&:focus,
-				&:active {
+				&:focus {
 					//border-bottom: 1px solid rgba($white, 1);
 					color: rgba($white, 1);
 				}
@@ -131,65 +84,46 @@ footer.site-footer {
 
 			.nu__customsvg {
 				margin: 0 0 0 $base-margin;
-			}
-		}
-	}
-
-	// todo: add this to some kind of dark mode?
-	// ? switch svg fill to white, or invert img
-	a.logo {
-		border-bottom: none 0;
-
-		svg path {
-			fill: $white;
-		}
-
-		img {
-			filter: invert(100%);
-		}
-	}
-
-	.navlinks {
-		// ?reset styles for any menu item
-		li {
-			margin: 0 0 ($base-margin * 0.5) 0;
-
-			&:last-of-type {
-				margin: 0;
-			}
-
-			// ? reset styles for any menu item link
-			a {
-				color: rgba($white, 0.75);
-				letter-spacing: 0.2px;
-				border: none 0;
-				border-left: 5px solid transparent;
-				padding-left: 5px;
-				font-weight: 300;
-				font-size: 0.875rem;
-
-				&:hover,
-				&:focus,
-				&:active {
-					border: none 0;
-					color: rgba($white, 1);
-					border-left: 5px solid rgba($white, 1);
+				&:first-child {
+					margin: 0;
 				}
 			}
 		}
-
-		// ? top level nav items are a row that may wrap
-		ul.menu {
+	}
+	.footer-navmenu {
+		flex: 1 1 auto; // lets the navlinks container fill the remaining space in between the other columns
+	}
+	.navlinks {
+		> ul {
 			display: flex;
 			flex-flow: row wrap;
-
+			justify-content: space-evenly; // evenly distributes remaining space around and between the navlink columns
+		}
+		// ? reset styles for any menu item link
+		a {
+			color: rgba($white, 0.75);
+			border: none 0;
+			border-left: 5px solid transparent;
+			padding-left: 5px;
+			font-weight: 300;
+			font-size: 0.875rem;
+			margin-top: ($base-margin * 0.5);
+			display: inline-block;
+			&:hover,
+			&:focus {
+				border: none 0;
+				color: rgba($white, 1);
+				border-left: 5px solid rgba($white, 1);
+			}
+		}
+		// ? top level nav items are a row that may wrap
+		ul.menu {
 			// ? handle top level nav items
 			> li {
-				margin: 0 $margin_2x $margin_2x 0;
-				@media screen and (max-width: 960px) {
-					margin: 0 $base-margin $base-margin 0;
+				margin: 0 0 0 $margin_2x;
+				&:first-child {
+					margin: 0;
 				}
-
 				&.current_page_item,
 				&.current-page-ancestor {
 					> a {
@@ -200,13 +134,9 @@ footer.site-footer {
 
 				// ? top level nav links stand out
 				> a {
-					// TODO: big  font here
-					// text-transform: uppercase;
 					font-weight: bold;
-
 					&:hover,
 					&:focus,
-					&:active,
 					&.current-menu-item,
 					&.menu-item-is-open,
 					&.neu__dropdown--active,
@@ -215,10 +145,6 @@ footer.site-footer {
 						border-left: 5px solid rgba($white, 1);
 					}
 				}
-
-				&:last-of-type {
-					margin: 0;
-				}
 			}
 		}
 
@@ -226,8 +152,6 @@ footer.site-footer {
 		// ?
 		li.menu-item-has-children {
 			> .sub-menu {
-				margin: $base-margin 0 0 0;
-
 				> li {
 					&.current_page_item {
 						> a {
@@ -241,7 +165,78 @@ footer.site-footer {
 	}
 
 	.footer-sidebar {
-		align-self: flex-end;
+		div.wpforms-container-full form.wpforms-form .wpforms-submit-container {
+			button.wpforms-submit {
+				margin: 0;
+				background-color: var(--wp--preset--color--nu-brand-red);
+				border: 1px solid var(--wp--preset--color--nu-brand-red);
+				color: $white;
+				&:hover,
+				&:focus {
+					border: 1px solid var(--wp--preset--color--nu-brand-red);
+					color: var(--wp--preset--color--nu-brand-red);
+					background-color: $white;
+				}
+			}
+		}
+	}
+
+	// ?
+	@media screen and (max-width: 960px) {
+		> section {
+			flex-flow: column nowrap;
+			> div {
+				margin: $margin_4x 0 0 0;
+			}
+		}
+	}
+
+	// ?
+	@media screen and (max-width: 780px) {
+		> section {
+			width: 90%;
+		}
+
+		.navlinks > ul.menu {
+			> li {
+				flex: 1 0 100%;
+				margin: $margin_2x 0 0 0;
+			}
+		}
+	}
+}
+
+//
+//
+//
+//
+//
+//
+//
+// 	older junkier stuff below
+//
+//
+//
+//
+//
+//
+//
+
+footer.site-footer {
+	.footer-siteinfo {
+	}
+
+	// todo: add this to some kind of dark mode?
+	// ? switch svg fill to white, or invert img
+	a.logo {
+		border-bottom: none 0;
+
+		svg path {
+			fill: $white;
+		}
+		img {
+			filter: invert(100%);
+		}
 	}
 
 	.nu__footer-sidebar.widget_block {
@@ -259,22 +254,6 @@ footer.site-footer {
 
 				input {
 					min-height: 44px;
-				}
-			}
-
-			// just use their basic darken
-			button.wpforms-submit {
-				color: white !important;
-				background-color: var(--wp--preset--color--red) !important;
-				margin: 0 !important;
-				border: 2px solid transparent !important;
-
-				&:hover,
-				&:focus,
-				&:active {
-					background-color: white !important;
-					color: var(--wp--preset--color--red) !important;
-					border-color: var(--wp--preset--color--red) !important;
 				}
 			}
 

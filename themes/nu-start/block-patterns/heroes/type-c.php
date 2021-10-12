@@ -17,8 +17,8 @@
 			'keywords'  => ['hero', 'nustart'],
 			'content'     => '
 				<!-- wp:group {"align":"full","className":"nu_pattern-is_hero\u002d\u002dis_type_c"} -->
-				<div class="wp-block-group alignfull nu_pattern-is_hero--is_type_c"><!-- wp:cover {"url":"http://nu-start.local/wp-content/uploads/pexels-anete-lusina-5240579-edited-scaled.jpg","id":413,"dimRatio":30,"contentPosition":"center center","align":"full"} -->
-				<div class="wp-block-cover alignfull has-background-dim-30 has-background-dim"><img class="wp-block-cover__image-background wp-image-413" alt="" src="http://nu-start.local/wp-content/uploads/pexels-anete-lusina-5240579-edited-scaled.jpg" data-object-fit="cover"/><div class="wp-block-cover__inner-container"><!-- wp:group {"align":"full"} -->
+				<div class="wp-block-group alignfull nu_pattern-is_hero--is_type_c"><!-- wp:cover {"url":"'.get_template_directory_uri().'/__lib/img/1920x1080.png","id":413,"dimRatio":30,"contentPosition":"center center","align":"full"} -->
+				<div class="wp-block-cover alignfull has-background-dim-30 has-background-dim"><img class="wp-block-cover__image-background wp-image-413" alt="" src="'.get_template_directory_uri().'/__lib/img/1920x1080.png" data-object-fit="cover"/><div class="wp-block-cover__inner-container"><!-- wp:group {"align":"full"} -->
 				<div class="wp-block-group alignfull"><!-- wp:heading {"textAlign":"center","level":1,"align":"full","className":"is-style-display"} -->
 				<h1 class="alignfull has-text-align-center is-style-display">Lorem ipsum <strong>dolor sit amet</strong></h1>
 				<!-- /wp:heading -->
@@ -29,7 +29,7 @@
 
 				<!-- wp:buttons {"contentJustification":"center"} -->
 				<div class="wp-block-buttons is-content-justification-center"><!-- wp:button {"className":"is-style-playhead"} -->
-				<div class="wp-block-button is-style-playhead"><a class="wp-block-button__link" href="https://www.youtube.com/watch?v=8YswvEWMotk" target="_blank" rel="noreferrer noopener">Lorem Video Button</a></div>
+				<div class="wp-block-button is-style-playhead"><a class="wp-block-button__link" href="#" target="_blank" rel="noreferrer noopener">Lorem Video Button</a></div>
 				<!-- /wp:button --></div>
 				<!-- /wp:buttons --></div>
 				<!-- /wp:group --></div></div>

@@ -3,5 +3,10 @@
 //
 hr,
 .wp-block-separator {
-	height: 4px;
+
+	opacity: 1;
+	&.is-style-wide {
+		height: 3px !important;
+	}
 }
+

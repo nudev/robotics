@@ -12,24 +12,27 @@ $orientationClass = !empty($item_style['orientation']) ? ' has-layout-' . $item_
 
 if( !empty($item_style['image_dimensions']) ){
 	switch ($item_style['image_dimensions']) {
-		case '1-1':
+		case 'auto':
+			$aspectRatio = '';
+			break;
+		case 'square':
 			$aspectRatio = ' has-square-cover-image';
 			break;
-		case '16-9':
+		case 'widest':
 			$aspectRatio = ' has-very-wide-cover-image';
 			break;
-		case '3-4':
+		case 'wide':
 			$aspectRatio = ' has-wide-cover-image';
 			break;
-		case '9-16':
+		case 'tallest':
 			$aspectRatio = ' has-very-tall-cover-image';
 			break;
-		case '4-3':
+		case 'tall':
 			$aspectRatio = ' has-tall-cover-image';
 			break;
-		
 		default:
 			# code...
+			$aspectRatio = '';
 			break;
 	}
 }
@@ -37,6 +40,10 @@ if( !empty($item_style['image_dimensions']) ){
 $excerpt = '';
 $excerpt .= !empty(self::$fields['excerpt_title']) ? '<p class="has-smaller-font-size"><i>'.self::$fields['excerpt_title'].'</i></p>' : '';
 $excerpt .= !empty(self::$fields['excerpt_body']) ? '<p class="has-smaller-font-size">'.self::$fields['excerpt_body'].'</p>' : '';
+
+// todo: lol this is too much
+$excerpt .= !empty(self::$fields['person_phone_number']) ? '<span><a href="tel:' .self::$fields['person_phone_number']. '" target="_blank">' .preg_replace('/\d{3}/', '$0.', str_replace('.', null, self::$fields['person_phone_number']), 2). '</a></span>' : '';
+$excerpt .= !empty(self::$fields['person_email']) ? '<span><a href="mailto:' .self::$fields['person_email']. '" target="_blank">' .self::$fields['person_email']. '</a></span>' : '';
 
 $guides['grid-item-person'] = '
 	<li class="grid-item%1$s%7$s%8$s">

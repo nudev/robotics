@@ -19,13 +19,6 @@
 		height: 100% !important;
 	}
 
-
-	.wp-block-columns > .wp-block-column {
-		&:last-child {
-			flex: 1 0 50%;
-		}
-	}
-
 	border-bottom: 1px solid $grey_4;
 	border-top: 1px solid $grey_4;
 

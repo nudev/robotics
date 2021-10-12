@@ -2,7 +2,7 @@
 	Columns Block
 */
 
-.wp-block-columns {	
+.wp-block-columns {
 	// ? custom style classes below
 	// just a shim here to test this kind of feature
 	&.is-style-justify-space-between {
@@ -25,30 +25,28 @@
 }
 
 .wp-block-columns:not(.is-not-stacked-on-mobile) > .wp-block-column {
-	
 	@media screen and (min-width: 782px) {
 		// flex-basis: auto;
 		// flex: 1;
 	}
 	@media screen and (max-width: 781px) {
-		&:not(:only-child){
+		&:not(:only-child) {
 			margin: $margin_2x 0 0 0;
 			flex: 1 1 100% !important;
 		}
-		// 
+		//
 		&:first-child {
 			margin: 0;
 		}
 	}
 }
 
-
 // adjustments for has-background padding (see about fixing in theme.json etc)
 .wp-block-columns,
 .wp-block-column {
-	&.has-background{
+	&.has-background {
 		padding: $margin_2x;
-		@media screen and ( max-width: 781px ){
+		@media screen and (max-width: 781px) {
 			padding: $base-margin;
 		}
 	}

@@ -35,8 +35,8 @@
 				<!-- /wp:column --></div>
 				<!-- /wp:columns -->
 				
-				<!-- wp:cover {"url":"http://nu-start.local/wp-content/uploads/1920x1080-1024x576.png","id":49,"dimRatio":30,"minHeight":600,"align":"full","style":{"color":{}}} -->
-				<div class="wp-block-cover alignfull has-background-dim-30 has-background-dim" style="min-height:600px"><img class="wp-block-cover__image-background wp-image-49" alt="" src="http://nu-start.local/wp-content/uploads/1920x1080-1024x576.png" data-object-fit="cover"/><div class="wp-block-cover__inner-container"><!-- wp:paragraph {"fontSize":"large"} -->
+				<!-- wp:cover {"url":"'.get_template_directory_uri().'/__lib/img/1920x1080.png","id":49,"dimRatio":30,"minHeight":600,"align":"full","style":{"color":{}}} -->
+				<div class="wp-block-cover alignfull has-background-dim-30 has-background-dim" style="min-height:600px"><img class="wp-block-cover__image-background wp-image-49" alt="" src="'.get_template_directory_uri().'/__lib/img/1920x1080.png" data-object-fit="cover"/><div class="wp-block-cover__inner-container"><!-- wp:paragraph {"fontSize":"large"} -->
 				<p class="has-large-font-size"></p>
 				<!-- /wp:paragraph --></div></div>
 				<!-- /wp:cover -->

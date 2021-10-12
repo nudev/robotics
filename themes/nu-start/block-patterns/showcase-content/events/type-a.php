@@ -9,15 +9,15 @@
 	 * viewportWidth (optional): An integer specifying the intended width of the pattern to allow for a scaled preview of the pattern in the inserter.
 	 */
 	register_block_pattern(
-		'nublocks/featured-people/type-a',
+		'nublocks/showcase-events/type-a',
 		array(
-			'title'       => 'Featured People --- Type A',
+			'title'       => 'Showcase Events - Type A',
 			'description' => 'Lorem description ipsum',
-			'categories'  => ['featured-people'],
-			'keywords'  => ['featured-people', 'featured', 'people', 'nustart'],
+			'categories'  => ['showcase-content'],
+			'keywords'  => ['showcase-events', 'showcase', 'events', 'nustart'],
 			'content'     => '
-				<!-- wp:group {"className":"nu_pattern-is_featured_people\u002d\u002dis_type_a"} -->
-				<div class="wp-block-group nu_pattern-is_featured_people--is_type_a"><!-- wp:group {"layout":{"inherit":true}} -->
+				<!-- wp:group {"className":"nu_pattern-is_featured_events\u002d\u002dis_type_a"} -->
+				<div class="wp-block-group nu_pattern-is_featured_events--is_type_a"><!-- wp:group {"layout":{"inherit":true}} -->
 				<div class="wp-block-group"><!-- wp:heading {"textAlign":"center","className":"is-style-display"} -->
 				<h2 class="has-text-align-center is-style-display">Lorem ipsum <strong>dolor sit</strong> amet</h2>
 				<!-- /wp:heading -->
@@ -27,11 +27,11 @@
 				<!-- /wp:paragraph --></div>
 				<!-- /wp:group -->
 				
-				<!-- wp:acf/posts-grid {"id":"block_60dc9ab90849a","name":"acf/posts-grid","data":{"options_columns":"5","_options_columns":"field_60b64c22f5171","options_show_filter":"0","_options_show_filter":"field_60b64c42f5172","options_pagination":"0","_options_pagination":"field_60b64c49f5173","options_autoselect":"1","_options_autoselect":"field_60c2520e28a92","options":"","_options":"field_60b64c1af5170","autoselect_posts_post_type":"nu_people","_autoselect_posts_post_type":"field_60d208713a1fe","autoselect_posts_limit_number":"5","_autoselect_posts_limit_number":"field_60c258147cc96","autoselect_posts_people_category":"","_autoselect_posts_people_category":"field_60c258747cc98","autoselect_posts_people_tags":"","_autoselect_posts_people_tags":"field_60c258887cc99","autoselect_posts":"","_autoselect_posts":"field_60c257da7f635","post_style_no_blocks":"0","_post_style_no_blocks":"field_60dca45127acf","post_style_has_links":"1","_post_style_has_links":"field_60dde44ad8400","post_style":"","_post_style":"field_60dca3e327acd"},"align":"","mode":"preview","wpClassName":"wp-block-acf-posts-grid"} /-->
+				<!-- wp:acf/posts-grid {"id":"block_60dc9ab90849a","name":"acf/posts-grid","data":{"options_columns":"5","_options_columns":"field_60b64c22f5171","options_show_filter":"0","_options_show_filter":"field_60b64c42f5172","options_pagination":"0","_options_pagination":"field_60b64c49f5173","options_autoselect":"1","_options_autoselect":"field_60c2520e28a92","options":"","_options":"field_60b64c1af5170","autoselect_posts_post_type":"nu_events","_autoselect_posts_post_type":"field_60d208713a1fe","autoselect_posts_limit_number":"5","_autoselect_posts_limit_number":"field_60c258147cc96","autoselect_posts_events_category":"","_autoselect_posts_events_category":"field_60c258747cc98","autoselect_posts_events_tags":"","_autoselect_posts_events_tags":"field_60c258887cc99","autoselect_posts":"","_autoselect_posts":"field_60c257da7f635","post_style_no_blocks":"0","_post_style_no_blocks":"field_60dca45127acf","post_style_has_links":"1","_post_style_has_links":"field_60dde44ad8400","post_style":"","_post_style":"field_60dca3e327acd"},"align":"","mode":"preview","wpClassName":"wp-block-acf-posts-grid"} /-->
 				
 				<!-- wp:buttons {"contentJustification":"center"} -->
 				<div class="wp-block-buttons is-content-justification-center"><!-- wp:button -->
-				<div class="wp-block-button"><a class="wp-block-button__link" href="http://nu-start.local/about-us/our-people/">Lorem See More Ipsum</a></div>
+				<div class="wp-block-button"><a class="wp-block-button__link" href="#">Lorem See More Ipsum</a></div>
 				<!-- /wp:button --></div>
 				<!-- /wp:buttons --></div>
 				<!-- /wp:group -->

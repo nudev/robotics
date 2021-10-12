@@ -15,28 +15,43 @@
       "palette": [
         {
           "name": "Black",
-          "slug": "nu-brand-black",
-          "color": "#1d1d1d"
+          "slug": "black",
+          "color": "#2d2926"
         },
         {
           "name": "White",
-          "slug": "nu-brand-white",
+          "slug": "white",
           "color": "#ffffff"
         },
         {
           "name": "Red",
-          "slug": "nu-brand-red",
+          "slug": "red",
           "color": "#d41b2c"
         },
         {
           "name": "Blue",
-          "slug": "nu-brand-blue",
-          "color": "#02CAF6"
+          "slug": "blue",
+          "color": "#4299e1"
         },
+		{
+		  "name": "Dark Blue",
+		  "slug": "dark-blue",
+		  "color": "#385d85"
+		},
         {
           "name": "Orange",
-          "slug": "nu-brand-orange",
-          "color": "#02caf6"
+          "slug": "orange",
+          "color": "#f86716"
+        },
+        {
+          "name": "Yellow",
+          "slug": "yellow",
+          "color": "#fac515"
+        },
+        {
+          "name": "Green",
+          "slug": "green",
+          "color": "#48bb78"
         },
         {
           "name": "Transparent",
@@ -97,6 +112,11 @@
           "slug": "huge",
           "size": "3rem",
           "name": "Huge"
+        },
+        {
+          "slug": "hugest",
+          "size": "5rem",
+          "name": "Hugest"
         }
       ]
     },
@@ -138,29 +158,10 @@
         "spacing": {
           "units": ["%", "px", "vw"]
         }
-      },
-      "core/paragraph": {
-        "typography": {
-          "fontSizes": [
-            {
-              "name": "Smaller",
-              "slug": "smaller",
-              "size": "0.875rem"
-            },
-            {
-              "name": "Larger",
-              "slug": "larger",
-              "size": "1.125rem"
-            }
-          ]
-        }
       }
     }
   },
   "styles": {
-    "border": {
-      "radius": "0px"
-    },
     "color": {
       "text": "var(--wp--preset--color--nu-brand-black)",
       "background": "var(--wp--preset--color--nu-brand-white)",

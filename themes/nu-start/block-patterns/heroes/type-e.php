@@ -17,8 +17,8 @@
 			'keywords'  => ['hero', 'nustart'],
 			'content'     => '
 				<!-- wp:group {"align":"full","className":"nu_pattern-is_hero\u002d\u002dis_type_e"} -->
-				<div class="wp-block-group alignfull nu_pattern-is_hero--is_type_e"><!-- wp:cover {"url":"http://nu-start.local/wp-content/uploads/1920x1080.png","id":49,"dimRatio":30,"overlayColor":"black","minHeight":30,"minHeightUnit":"vw","align":"full","className":"cover_tucks_next_block"} -->
-				<div class="wp-block-cover alignfull has-background-dim-30 has-black-background-color has-background-dim cover_tucks_next_block" style="min-height:30vw"><img class="wp-block-cover__image-background wp-image-49" alt="" src="http://nu-start.local/wp-content/uploads/1920x1080.png" data-object-fit="cover"/><div class="wp-block-cover__inner-container"><!-- wp:heading {"textAlign":"center","level":1,"align":"full","className":"is-style-display"} -->
+				<div class="wp-block-group alignfull nu_pattern-is_hero--is_type_e"><!-- wp:cover {"url":"'.get_template_directory_uri().'/__lib/img/1920x1080.png","id":49,"dimRatio":30,"overlayColor":"black","minHeight":30,"minHeightUnit":"vw","align":"full","className":"cover_tucks_next_block"} -->
+				<div class="wp-block-cover alignfull has-background-dim-30 has-black-background-color has-background-dim cover_tucks_next_block" style="min-height:30vw"><img class="wp-block-cover__image-background wp-image-49" alt="" src="'.get_template_directory_uri().'/__lib/img/1920x1080.png" data-object-fit="cover"/><div class="wp-block-cover__inner-container"><!-- wp:heading {"textAlign":"center","level":1,"align":"full","className":"is-style-display"} -->
 				<h1 class="alignfull has-text-align-center is-style-display">Lorem ipsum <strong>dolor sit</strong> amet</h1>
 				<!-- /wp:heading -->
 				
@@ -38,7 +38,7 @@
 				
 				<!-- wp:buttons -->
 				<div class="wp-block-buttons"><!-- wp:button {"className":"is-style-playhead"} -->
-				<div class="wp-block-button is-style-playhead"><a class="wp-block-button__link" href="https://www.youtube.com/watch?v=8YswvEWMotk" target="_blank" rel="noreferrer noopener">Informative Video Popup</a></div>
+				<div class="wp-block-button is-style-playhead"><a class="wp-block-button__link" href="#" target="_blank" rel="noreferrer noopener">Informative Video Popup</a></div>
 				<!-- /wp:button --></div>
 				<!-- /wp:buttons --></div></div>
 				<!-- /wp:cover -->

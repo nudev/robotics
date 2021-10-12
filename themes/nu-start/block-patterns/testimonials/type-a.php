@@ -19,8 +19,8 @@
 				<!-- wp:group {"className":"nu_pattern-is_testimonial\u002d\u002dis_type_a","layout":{"inherit":false}} -->
 				<div class="wp-block-group nu_pattern-is_testimonial--is_type_a"><!-- wp:columns -->
 				<div class="wp-block-columns"><!-- wp:column {"verticalAlignment":"center","width":"20%"} -->
-				<div class="wp-block-column is-vertically-aligned-center" style="flex-basis:20%"><!-- wp:image {"align":"center","id":51,"sizeSlug":"medium","linkDestination":"none","className":"is-style-rounded"} -->
-				<div class="wp-block-image is-style-rounded"><figure class="aligncenter size-medium"><img src="http://nu-start.local/wp-content/uploads/profile-placeholder-max-300x300.png" alt="" class="wp-image-51"/><figcaption>Lorem Optional Caption Ipsum</figcaption></figure></div>
+				<div class="wp-block-column is-vertically-aligned-center" style="flex-basis:20%"><!-- wp:image {"align":"center","sizeSlug":"medium","linkDestination":"none","className":"is-style-rounded"} -->
+				<div class="wp-block-image is-style-rounded"><figure class="aligncenter size-medium"><img src="'.get_template_directory_uri().'/__lib/img/720x720.png" /><figcaption>Lorem Optional Caption Ipsum</figcaption></figure></div>
 				<!-- /wp:image --></div>
 				<!-- /wp:column -->
 				

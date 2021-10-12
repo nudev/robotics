@@ -1,3 +1,4 @@
+.blocks--wrapper > .wp-block-group.alignfull:first-child,
 .blocks--wrapper > .wp-block-cover.alignfull:first-child {
 	margin-top: 0;
 }
@@ -39,6 +40,7 @@
 		max-width: 80%;
 	}
 
+	// ? breadcrumbs inside the cover block are assumed to be a specific style and layout
 	.nu_breadcrumbs {
 		position: absolute;
 		bottom: 0;
@@ -61,23 +63,29 @@
 			margin: 0 0 0 0;
 		}
 	}
+}
 
+.wp-block-group,
+.wp-block-cover {
 	&.cover_tucks_next_block {
 		margin-bottom: -#{$margin_6x}; // 2x margin less than the padding; to have vertical space (difference will be visible margin)
-		padding-bottom: $margin_12x;
+		// padding-bottom: $margin_12x;
 		+ .wp-block,
 		+ .wp-block-columns,
 		+ .nu_posts-grid,
 		+ .wp-block-image,
 		+ .wp-block-group,
 		+ .wp-block-buttons {
-			margin-top: 0;
+			margin-top: 0 !important;
+			margin-bottom: 0 !important;
 			position: relative;
 			z-index: 1;
+			min-height: $margin_6x;
 		}
 	}
 }
 
+	
 .blocks--wrapper > .wp-block-cover:first-child {
 	margin-top: 0;
 }

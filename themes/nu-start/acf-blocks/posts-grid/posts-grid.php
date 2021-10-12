@@ -16,7 +16,7 @@
 // return a new instance of the posts grid block
 
 // 
-$instance = new PostsGrid($block, $post_id);
+$instance = new PostsGrid( $block, $content, $is_preview, $post_id );
 
 
 ?>

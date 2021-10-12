@@ -43,6 +43,45 @@
             "new_lines": "",
             "acfe_textarea_code": 0,
             "acfe_field_group_condition": 0
+        },
+        {
+            "key": "field_615f38861d72a",
+            "label": "Email",
+            "name": "person_email",
+            "type": "email",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "default_value": "",
+            "placeholder": "",
+            "prepend": "",
+            "append": "",
+            "acfe_field_group_condition": 0
+        },
+        {
+            "key": "field_615f38951d72b",
+            "label": "Phone Number",
+            "name": "person_phone_number",
+            "type": "text",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "default_value": "",
+            "placeholder": "",
+            "prepend": "",
+            "append": "",
+            "maxlength": "",
+            "acfe_field_group_condition": 0
         }
     ],
     "location": [
@@ -69,8 +108,8 @@
     "acfe_display_title": "",
     "acfe_meta": "",
     "acfe_note": "",
+    "modified": 1633630691,
     "acfe_categories": {
         "custom-post-metadata": "Custom Post Metadata"
-    },
-    "modified": 1630613090
+    }
 }

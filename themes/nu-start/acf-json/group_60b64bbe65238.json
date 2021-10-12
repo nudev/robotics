@@ -16,7 +16,7 @@
                 "id": ""
             },
             "layout": "block",
-            "acfe_seamless_style": 0,
+            "acfe_seamless_style": 1,
             "acfe_group_modal": 0,
             "acfe_field_group_condition": 0,
             "sub_fields": [
@@ -124,7 +124,7 @@
                         "id": ""
                     },
                     "message": "",
-                    "default_value": 0,
+                    "default_value": 1,
                     "ui": 1,
                     "ui_on_text": "",
                     "ui_off_text": "",
@@ -201,7 +201,7 @@
                 "id": ""
             },
             "layout": "block",
-            "acfe_seamless_style": 0,
+            "acfe_seamless_style": 1,
             "acfe_group_modal": 0,
             "acfe_field_group_condition": 0,
             "sub_fields": [
@@ -222,9 +222,10 @@
                         "post",
                         "nu_events",
                         "nu_people",
-                        "nu_programs",
-                        "nu_faces",
-                        "nu_component-demos"
+                        "nu_component-demos",
+                        "nu_initiatives",
+                        "nu_locations",
+                        "nu_programs"
                     ],
                     "field_type": "select",
                     "max": "",
@@ -243,26 +244,19 @@
                     "toggle": 0
                 },
                 {
-                    "key": "field_60c258147cc96",
-                    "label": "Limit Number",
-                    "name": "limit_number",
+                    "key": "field_61620e12a5c26",
+                    "label": "Stop After",
+                    "name": "stop_after",
                     "type": "range",
-                    "instructions": "0 = no limit",
+                    "instructions": "max number of items to query including all pages\r\n0 means no limit; not no items",
                     "required": 0,
-                    "conditional_logic": [
-                        [
-                            {
-                                "field": "field_60d208713a1fe",
-                                "operator": "!=empty"
-                            }
-                        ]
-                    ],
+                    "conditional_logic": 0,
                     "wrapper": {
                         "width": "",
                         "class": "",
                         "id": ""
                     },
-                    "default_value": "",
+                    "default_value": 0,
                     "min": "",
                     "max": 12,
                     "step": "",
@@ -271,10 +265,46 @@
                     "acfe_field_group_condition": 0
                 },
                 {
-                    "key": "field_6107eb0c31b46",
-                    "label": "Limit From",
-                    "name": "limit_from",
-                    "type": "true_false",
+                    "key": "field_61620d7fa5c24",
+                    "label": "Allowed Terms",
+                    "name": "allowed_terms",
+                    "type": "acfe_taxonomy_terms",
+                    "instructions": "only show items belonging to selected term groups",
+                    "required": 0,
+                    "conditional_logic": 0,
+                    "wrapper": {
+                        "width": "",
+                        "class": "",
+                        "id": ""
+                    },
+                    "taxonomy": "",
+                    "allow_terms": "",
+                    "allow_level": "",
+                    "field_type": "select",
+                    "min": "",
+                    "max": "",
+                    "default_value": [],
+                    "return_format": "object",
+                    "ui": 1,
+                    "allow_null": 0,
+                    "placeholder": "",
+                    "multiple": 1,
+                    "ajax": 0,
+                    "save_terms": 0,
+                    "load_terms": 0,
+                    "acfe_field_group_condition": 0,
+                    "choices": [],
+                    "search_placeholder": "",
+                    "layout": "",
+                    "toggle": 0,
+                    "allow_custom": 0,
+                    "other_choice": 0
+                },
+                {
+                    "key": "field_616302eec35dd",
+                    "label": "Allowed Operator",
+                    "name": "allowed_operator",
+                    "type": "button_group",
                     "instructions": "",
                     "required": 0,
                     "conditional_logic": 0,
@@ -283,300 +313,74 @@
                         "class": "",
                         "id": ""
                     },
-                    "message": "",
-                    "default_value": 0,
-                    "ui": 1,
-                    "ui_on_text": "Excluding",
-                    "ui_off_text": "Including",
+                    "choices": {
+                        "all": "Matches All",
+                        "any": "Matches Any"
+                    },
+                    "allow_null": 0,
+                    "default_value": "any",
+                    "layout": "horizontal",
+                    "return_format": "value",
                     "acfe_field_group_condition": 0
                 },
                 {
-                    "key": "field_60d35d6bd2a16",
-                    "label": "Post Category",
-                    "name": "post_category",
-                    "type": "taxonomy",
-                    "instructions": "",
+                    "key": "field_61620dd2a5c25",
+                    "label": "Disallowed Terms",
+                    "name": "disallowed_terms",
+                    "type": "acfe_taxonomy_terms",
+                    "instructions": "restrict showing items belonging to selected term groups",
                     "required": 0,
-                    "conditional_logic": [
-                        [
-                            {
-                                "field": "field_60d208713a1fe",
-                                "operator": "==",
-                                "value": "post"
-                            }
-                        ]
-                    ],
+                    "conditional_logic": 0,
                     "wrapper": {
                         "width": "",
                         "class": "",
                         "id": ""
                     },
-                    "taxonomy": "category",
-                    "field_type": "checkbox",
+                    "taxonomy": "",
+                    "allow_terms": "",
+                    "allow_level": "",
+                    "field_type": "select",
                     "min": "",
                     "max": "",
-                    "add_term": 0,
+                    "default_value": [],
+                    "return_format": "object",
+                    "ui": 1,
+                    "allow_null": 0,
+                    "placeholder": "",
+                    "multiple": 1,
+                    "ajax": 0,
                     "save_terms": 0,
                     "load_terms": 0,
-                    "return_format": "id",
-                    "acfe_bidirectional": {
-                        "acfe_bidirectional_enabled": "0"
-                    },
                     "acfe_field_group_condition": 0,
-                    "multiple": 0,
-                    "allow_null": 0
+                    "choices": [],
+                    "search_placeholder": "",
+                    "layout": "",
+                    "toggle": 0,
+                    "allow_custom": 0,
+                    "other_choice": 0
                 },
                 {
-                    "key": "field_60d35d7ed2a17",
-                    "label": "Post Tags",
-                    "name": "post_tags",
-                    "type": "taxonomy",
+                    "key": "field_61630383c35de",
+                    "label": "Disallowed Operator",
+                    "name": "disallowed_operator",
+                    "type": "button_group",
                     "instructions": "",
                     "required": 0,
-                    "conditional_logic": [
-                        [
-                            {
-                                "field": "field_60d208713a1fe",
-                                "operator": "==",
-                                "value": "post"
-                            }
-                        ]
-                    ],
+                    "conditional_logic": 0,
                     "wrapper": {
                         "width": "",
                         "class": "",
                         "id": ""
                     },
-                    "taxonomy": "post_tag",
-                    "field_type": "checkbox",
-                    "min": "",
-                    "max": "",
-                    "add_term": 0,
-                    "save_terms": 0,
-                    "load_terms": 0,
-                    "return_format": "id",
-                    "acfe_bidirectional": {
-                        "acfe_bidirectional_enabled": "0"
+                    "choices": {
+                        "all": "Matches All",
+                        "any": "Matches Any"
                     },
-                    "acfe_field_group_condition": 0,
-                    "multiple": 0,
-                    "allow_null": 0
-                },
-                {
-                    "key": "field_60c258747cc98",
-                    "label": "People Category",
-                    "name": "people_category",
-                    "type": "taxonomy",
-                    "instructions": "",
-                    "required": 0,
-                    "conditional_logic": [
-                        [
-                            {
-                                "field": "field_60d208713a1fe",
-                                "operator": "==",
-                                "value": "nu_people"
-                            }
-                        ]
-                    ],
-                    "wrapper": {
-                        "width": "",
-                        "class": "",
-                        "id": ""
-                    },
-                    "taxonomy": "nu_people-categories",
-                    "field_type": "checkbox",
-                    "min": "",
-                    "max": "",
-                    "add_term": 0,
-                    "save_terms": 0,
-                    "load_terms": 0,
-                    "return_format": "id",
-                    "acfe_bidirectional": {
-                        "acfe_bidirectional_enabled": "0"
-                    },
-                    "acfe_field_group_condition": 0,
-                    "multiple": 0,
-                    "allow_null": 0
-                },
-                {
-                    "key": "field_60c258887cc99",
-                    "label": "People Tags",
-                    "name": "people_tags",
-                    "type": "taxonomy",
-                    "instructions": "",
-                    "required": 0,
-                    "conditional_logic": [
-                        [
-                            {
-                                "field": "field_60d208713a1fe",
-                                "operator": "==",
-                                "value": "nu_people"
-                            }
-                        ]
-                    ],
-                    "wrapper": {
-                        "width": "",
-                        "class": "",
-                        "id": ""
-                    },
-                    "taxonomy": "nu_people-tags",
-                    "field_type": "checkbox",
-                    "min": "",
-                    "max": "",
-                    "add_term": 0,
-                    "save_terms": 0,
-                    "load_terms": 0,
-                    "return_format": "id",
-                    "acfe_bidirectional": {
-                        "acfe_bidirectional_enabled": "0"
-                    },
-                    "acfe_field_group_condition": 0,
-                    "multiple": 0,
-                    "allow_null": 0
-                },
-                {
-                    "key": "field_60d35e25e9118",
-                    "label": "Events Category",
-                    "name": "events_category",
-                    "type": "taxonomy",
-                    "instructions": "",
-                    "required": 0,
-                    "conditional_logic": [
-                        [
-                            {
-                                "field": "field_60d208713a1fe",
-                                "operator": "==",
-                                "value": "nu_events"
-                            }
-                        ]
-                    ],
-                    "wrapper": {
-                        "width": "",
-                        "class": "",
-                        "id": ""
-                    },
-                    "taxonomy": "nu_events-categories",
-                    "field_type": "checkbox",
-                    "min": "",
-                    "max": "",
-                    "add_term": 0,
-                    "save_terms": 0,
-                    "load_terms": 0,
-                    "return_format": "id",
-                    "acfe_bidirectional": {
-                        "acfe_bidirectional_enabled": "0"
-                    },
-                    "acfe_field_group_condition": 0,
-                    "multiple": 0,
-                    "allow_null": 0
-                },
-                {
-                    "key": "field_60d35e20e9117",
-                    "label": "Events Tags",
-                    "name": "events_tags",
-                    "type": "taxonomy",
-                    "instructions": "",
-                    "required": 0,
-                    "conditional_logic": [
-                        [
-                            {
-                                "field": "field_60d208713a1fe",
-                                "operator": "==",
-                                "value": "nu_events"
-                            }
-                        ]
-                    ],
-                    "wrapper": {
-                        "width": "",
-                        "class": "",
-                        "id": ""
-                    },
-                    "taxonomy": "nu_events-tags",
-                    "field_type": "checkbox",
-                    "min": "",
-                    "max": "",
-                    "add_term": 0,
-                    "save_terms": 0,
-                    "load_terms": 0,
-                    "return_format": "id",
-                    "acfe_bidirectional": {
-                        "acfe_bidirectional_enabled": "0"
-                    },
-                    "acfe_field_group_condition": 0,
-                    "multiple": 0,
-                    "allow_null": 0
-                },
-                {
-                    "key": "field_60d35e30e9119",
-                    "label": "Programs Category",
-                    "name": "programs_category",
-                    "type": "taxonomy",
-                    "instructions": "",
-                    "required": 0,
-                    "conditional_logic": [
-                        [
-                            {
-                                "field": "field_60d208713a1fe",
-                                "operator": "==",
-                                "value": "nu_programs"
-                            }
-                        ]
-                    ],
-                    "wrapper": {
-                        "width": "",
-                        "class": "",
-                        "id": ""
-                    },
-                    "taxonomy": "nu_programs-categories",
-                    "field_type": "checkbox",
-                    "min": "",
-                    "max": "",
-                    "add_term": 0,
-                    "save_terms": 0,
-                    "load_terms": 0,
-                    "return_format": "id",
-                    "acfe_bidirectional": {
-                        "acfe_bidirectional_enabled": "0"
-                    },
-                    "acfe_field_group_condition": 0,
-                    "multiple": 0,
-                    "allow_null": 0
-                },
-                {
-                    "key": "field_60d35e3ce911a",
-                    "label": "Programs Tags",
-                    "name": "programs_tags",
-                    "type": "taxonomy",
-                    "instructions": "",
-                    "required": 0,
-                    "conditional_logic": [
-                        [
-                            {
-                                "field": "field_60d208713a1fe",
-                                "operator": "==",
-                                "value": "nu_programs"
-                            }
-                        ]
-                    ],
-                    "wrapper": {
-                        "width": "",
-                        "class": "",
-                        "id": ""
-                    },
-                    "taxonomy": "nu_programs-tags",
-                    "field_type": "checkbox",
-                    "min": "",
-                    "max": "",
-                    "add_term": 0,
-                    "save_terms": 0,
-                    "load_terms": 0,
-                    "return_format": "id",
-                    "acfe_bidirectional": {
-                        "acfe_bidirectional_enabled": "0"
-                    },
-                    "acfe_field_group_condition": 0,
-                    "multiple": 0,
-                    "allow_null": 0
+                    "allow_null": 0,
+                    "default_value": "any",
+                    "layout": "horizontal",
+                    "return_format": "value",
+                    "acfe_field_group_condition": 0
                 }
             ]
         },
@@ -640,14 +444,15 @@
                         "id": ""
                     },
                     "choices": {
+                        "auto": "Auto",
                         "square": "Square",
                         "tall": "Tall",
                         "tallest": "Tallest",
                         "wide": "Wide",
                         "widest": "Widest"
                     },
-                    "allow_null": 0,
-                    "default_value": "square",
+                    "allow_null": 1,
+                    "default_value": "auto",
                     "layout": "vertical",
                     "return_format": "value",
                     "acfe_field_group_condition": 0
@@ -710,8 +515,8 @@
     "acfe_display_title": "",
     "acfe_meta": "",
     "acfe_note": "",
+    "modified": 1633878931,
     "acfe_categories": {
         "acf-block": "ACF Block"
-    },
-    "modified": 1630613089
+    }
 }

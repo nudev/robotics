@@ -17,8 +17,8 @@
 			'keywords'  => ['testimonial', 'testimonial', 'nustart'],
 			'content'     => '
 				<!-- wp:group {"className":"nu_pattern-is_testimonial\u002d\u002dis_type_b"} -->
-				<div class="wp-block-group nu_pattern-is_testimonial--is_type_b"><!-- wp:image {"align":"center","id":51,"sizeSlug":"medium","linkDestination":"none","className":"is-style-rounded"} -->
-				<div class="wp-block-image is-style-rounded"><figure class="aligncenter size-medium"><img src="http://nu-start.local/wp-content/uploads/profile-placeholder-max-300x300.png" alt="" class="wp-image-51"/><figcaption>Lorem Optional Caption Ipsum</figcaption></figure></div>
+				<div class="wp-block-group nu_pattern-is_testimonial--is_type_b"><!-- wp:image {"align":"center","width":180,"height":180,"sizeSlug":"medium","linkDestination":"none","className":"is-style-rounded"} -->
+				<div class="wp-block-image is-style-rounded"><figure class="aligncenter size-medium is-resized"><img src="'.get_template_directory_uri().'/__lib/img/720x720.png" alt="" width="180" height="180"/><figcaption>Lorem Optional Caption Ipsum</figcaption></figure></div>
 				<!-- /wp:image -->
 				
 				<!-- wp:pullquote -->

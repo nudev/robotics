@@ -13,11 +13,6 @@ include_once( get_template_directory() . '/block-styles/register-block-styles.ph
 include_once( get_template_directory() . '/block-patterns/register-block-patterns.php' );
 
 
-
-
-
-
-
 // add/remove block categories
 add_filter( 'block_categories_all', 'nu__manage_block_categories', 10, 2 );
 if( !function_exists('nu__manage_block_categories') ){

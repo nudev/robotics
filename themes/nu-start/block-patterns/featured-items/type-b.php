@@ -32,8 +32,8 @@
 				<!-- wp:group {"layout":{"inherit":true}} -->
 				<div class="wp-block-group"><!-- wp:columns {"verticalAlignment":"center"} -->
 				<div class="wp-block-columns are-vertically-aligned-center"><!-- wp:column {"verticalAlignment":"center","width":"15%"} -->
-				<div class="wp-block-column is-vertically-aligned-center" style="flex-basis:15%"><!-- wp:image {"id":1277,"sizeSlug":"thumbnail","className":"is-style-rounded"} -->
-				<figure class="wp-block-image size-thumbnail is-style-rounded"><img src="http://nu-start.local/wp-content/uploads/1024x768-edited-1-150x150.png" alt="" class="wp-image-1277"/></figure>
+				<div class="wp-block-column is-vertically-aligned-center" style="flex-basis:15%"><!-- wp:image {"sizeSlug":"thumbnail","className":"is-style-rounded"} -->
+				<figure class="wp-block-image size-thumbnail is-style-rounded"><img src="'.get_template_directory_uri().'/__lib/img/720x720.png" alt="" /></figure>
 				<!-- /wp:image --></div>
 				<!-- /wp:column -->
 				
@@ -50,8 +50,8 @@
 				
 				<!-- wp:columns {"verticalAlignment":"center"} -->
 				<div class="wp-block-columns are-vertically-aligned-center"><!-- wp:column {"verticalAlignment":"center","width":"15%"} -->
-				<div class="wp-block-column is-vertically-aligned-center" style="flex-basis:15%"><!-- wp:image {"id":1277,"sizeSlug":"thumbnail","className":"is-style-rounded"} -->
-				<figure class="wp-block-image size-thumbnail is-style-rounded"><img src="http://nu-start.local/wp-content/uploads/1024x768-edited-1-150x150.png" alt="" class="wp-image-1277"/></figure>
+				<div class="wp-block-column is-vertically-aligned-center" style="flex-basis:15%"><!-- wp:image {"sizeSlug":"thumbnail","className":"is-style-rounded"} -->
+				<figure class="wp-block-image size-thumbnail is-style-rounded"><img src="'.get_template_directory_uri().'/__lib/img/720x720.png" alt="" /></figure>
 				<!-- /wp:image --></div>
 				<!-- /wp:column -->
 				
@@ -68,8 +68,8 @@
 				
 				<!-- wp:columns {"verticalAlignment":"center"} -->
 				<div class="wp-block-columns are-vertically-aligned-center"><!-- wp:column {"verticalAlignment":"center","width":"15%"} -->
-				<div class="wp-block-column is-vertically-aligned-center" style="flex-basis:15%"><!-- wp:image {"id":1277,"sizeSlug":"thumbnail","className":"is-style-rounded"} -->
-				<figure class="wp-block-image size-thumbnail is-style-rounded"><img src="http://nu-start.local/wp-content/uploads/1024x768-edited-1-150x150.png" alt="" class="wp-image-1277"/></figure>
+				<div class="wp-block-column is-vertically-aligned-center" style="flex-basis:15%"><!-- wp:image {"sizeSlug":"thumbnail","className":"is-style-rounded"} -->
+				<figure class="wp-block-image size-thumbnail is-style-rounded"><img src="'.get_template_directory_uri().'/__lib/img/720x720.png" alt="" /></figure>
 				<!-- /wp:image --></div>
 				<!-- /wp:column -->
 				
@@ -87,8 +87,8 @@
 				<!-- /wp:column -->
 				
 				<!-- wp:column -->
-				<div class="wp-block-column"><!-- wp:cover {"url":"http://nu-start.local/wp-content/uploads/pexels-marie-lemaistre-2014027-scaled.jpg","id":298,"dimRatio":0,"minHeight":100,"minHeightUnit":"%"} -->
-				<div class="wp-block-cover" style="min-height:100%"><img class="wp-block-cover__image-background wp-image-298" alt="" src="http://nu-start.local/wp-content/uploads/pexels-marie-lemaistre-2014027-scaled.jpg" data-object-fit="cover"/><div class="wp-block-cover__inner-container"><!-- wp:paragraph {"align":"center","placeholder":"Write title…","fontSize":"large"} -->
+				<div class="wp-block-column"><!-- wp:cover {"url":"'.get_template_directory_uri().'/__lib/img/1920x1080.png","id":298,"dimRatio":0,"minHeight":100,"minHeightUnit":"%"} -->
+				<div class="wp-block-cover" style="min-height:100%"><img class="wp-block-cover__image-background wp-image-298" alt="" src="'.get_template_directory_uri().'/__lib/img/1920x1080.png" data-object-fit="cover"/><div class="wp-block-cover__inner-container"><!-- wp:paragraph {"align":"center","placeholder":"Write title…","fontSize":"large"} -->
 				<p class="has-text-align-center has-large-font-size"></p>
 				<!-- /wp:paragraph --></div></div>
 				<!-- /wp:cover --></div>

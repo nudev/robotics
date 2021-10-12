@@ -36,7 +36,7 @@
 				<div class="wp-block-column is-vertically-aligned-center"><!-- wp:columns {"verticalAlignment":"center"} -->
 				<div class="wp-block-columns are-vertically-aligned-center"><!-- wp:column {"verticalAlignment":"center","width":"15%"} -->
 				<div class="wp-block-column is-vertically-aligned-center" style="flex-basis:15%"><!-- wp:image {"id":1277,"sizeSlug":"thumbnail","className":"is-style-rounded"} -->
-				<figure class="wp-block-image size-thumbnail is-style-rounded"><img src="http://nu-start.local/wp-content/uploads/1024x768-edited-1-150x150.png" alt="" class="wp-image-1277"/></figure>
+				<figure class="wp-block-image size-thumbnail is-style-rounded"><img src="'.get_template_directory_uri().'/__lib/img/720x720.png" alt="" class="wp-image-1277"/></figure>
 				<!-- /wp:image --></div>
 				<!-- /wp:column -->
 				
@@ -56,7 +56,7 @@
 				<div class="wp-block-column is-vertically-aligned-center"><!-- wp:columns {"verticalAlignment":"center"} -->
 				<div class="wp-block-columns are-vertically-aligned-center"><!-- wp:column {"verticalAlignment":"center","width":"15%"} -->
 				<div class="wp-block-column is-vertically-aligned-center" style="flex-basis:15%"><!-- wp:image {"id":1277,"sizeSlug":"thumbnail","className":"is-style-rounded"} -->
-				<figure class="wp-block-image size-thumbnail is-style-rounded"><img src="http://nu-start.local/wp-content/uploads/1024x768-edited-1-150x150.png" alt="" class="wp-image-1277"/></figure>
+				<figure class="wp-block-image size-thumbnail is-style-rounded"><img src="'.get_template_directory_uri().'/__lib/img/720x720.png" alt="" class="wp-image-1277"/></figure>
 				<!-- /wp:image --></div>
 				<!-- /wp:column -->
 				
@@ -78,7 +78,7 @@
 				<div class="wp-block-column is-vertically-aligned-center"><!-- wp:columns {"verticalAlignment":"center"} -->
 				<div class="wp-block-columns are-vertically-aligned-center"><!-- wp:column {"verticalAlignment":"center","width":"15%"} -->
 				<div class="wp-block-column is-vertically-aligned-center" style="flex-basis:15%"><!-- wp:image {"id":1277,"sizeSlug":"thumbnail","className":"is-style-rounded"} -->
-				<figure class="wp-block-image size-thumbnail is-style-rounded"><img src="http://nu-start.local/wp-content/uploads/1024x768-edited-1-150x150.png" alt="" class="wp-image-1277"/></figure>
+				<figure class="wp-block-image size-thumbnail is-style-rounded"><img src="'.get_template_directory_uri().'/__lib/img/720x720.png" alt="" class="wp-image-1277"/></figure>
 				<!-- /wp:image --></div>
 				<!-- /wp:column -->
 				
@@ -98,7 +98,7 @@
 				<div class="wp-block-column is-vertically-aligned-center"><!-- wp:columns {"verticalAlignment":"center"} -->
 				<div class="wp-block-columns are-vertically-aligned-center"><!-- wp:column {"verticalAlignment":"center","width":"15%"} -->
 				<div class="wp-block-column is-vertically-aligned-center" style="flex-basis:15%"><!-- wp:image {"id":1277,"sizeSlug":"thumbnail","className":"is-style-rounded"} -->
-				<figure class="wp-block-image size-thumbnail is-style-rounded"><img src="http://nu-start.local/wp-content/uploads/1024x768-edited-1-150x150.png" alt="" class="wp-image-1277"/></figure>
+				<figure class="wp-block-image size-thumbnail is-style-rounded"><img src="'.get_template_directory_uri().'/__lib/img/720x720.png" alt="" class="wp-image-1277"/></figure>
 				<!-- /wp:image --></div>
 				<!-- /wp:column -->
 				

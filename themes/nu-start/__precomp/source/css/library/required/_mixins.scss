@@ -126,8 +126,7 @@
 		display: block;
 		content: "";
 		width: 100%;
-		// padding-top: ($h / $w) * 100%;
-		padding-top: math.div($h, $w);
+		padding-top: (math.div($h, $w) * 100%);
 	}
 }
 

@@ -5,22 +5,24 @@ div.filteringform {
 	padding: $margin_2x $margin_2x;
 	margin: 0 0 $margin_4x 0;
 	text-align: center;
+	width: 100%;
 
 	// background-color: rgba(#f8f6f6, 1);
 	// @include boxshadow(2);
 
+	// ? when select2 is disabled this helps see what is going on
+	option[selected="selected"] {
+		font-weight: bold;
+		font-style: italic;
+	}
+
 	> form {
 		display: flex;
-		flex-flow: row nowrap;
+		flex-flow: row wrap;
 		justify-content: space-between;
 		width: 100%;
 		align-items: center;
 		position: relative;
-
-		// ? hide labels
-		label {
-			@include displayedInvisible;
-		}
 
 		// submission buttons container
 		> .submission {
@@ -66,20 +68,28 @@ div.filteringform {
 			}
 		}
 
+		// ?
 		> .filters {
-			flex: 1 0 auto;
+			flex: 0 1 auto;
 			text-align: left;
+			max-width: 100%;
+			display: flex;
+			flex-flow: row wrap;
+			align-items: flex-end;
 
+			// ?
 			.filters-filter {
+				flex: 0 1 auto;
 				display: inline-block;
-				margin: 0 0 0 $margin_2x;
+				margin: $base-margin;
 				vertical-align: middle;
-				width: 100%;
-				max-width: 220px;
 				position: relative;
-
-				&:first-child {
-					margin: 0 0 0 0;
+				min-width: 200px;
+				> label {
+					display: none;
+				}
+				> select {
+					position: relative;
 				}
 
 				@media screen and (max-width: 640px) {
@@ -94,7 +104,6 @@ div.filteringform {
 				// ? select fills the space it is in
 				select {
 					width: 100%;
-					// visibility: hidden; // hides the non-select2 powered stuff
 				}
 
 				.select2 {

@@ -478,7 +478,7 @@ input[type=search] {
   display: block;
   content: "";
   width: 100%;
-  padding-top: 1;
+  padding-top: 100%;
 }
 .nu_program .intro-before-overview > ul li:first-child {
   margin-left: 0;

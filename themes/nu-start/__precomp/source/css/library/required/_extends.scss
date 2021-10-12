@@ -3,40 +3,44 @@
 %base_blocks_container {
 	max-width: 100%;
 	width: 100%;
+
+	// ? as a basic rule; all top-level blocks have a determined width
 	> * {
 		max-width: 80%;
-		@media screen and (max-width: 640px) {
-			max-width: 90%;
-		}
-		margin-left: auto;
-		margin-right: auto;
 		&.alignwide {
 			max-width: 90%;
 		}
-		&.alignfull {
-			max-width: 100%;
-		}
+		&.alignfull,
 		&.is-reusable {
 			max-width: 100%;
 		}
 	}
 
-	> .nu_posts-grid,
-	> .wp-block-query,
-	> .wp-block-cover,
-	> .wp-block-columns,
-	> .wp-block-group,
-	> .wp-block {
-		margin-top: $margin_8x;
-		@media screen and (max-width: 640px) {
-			margin-top: $margin_4x;
+	// ? as a basic rule; all top-level blocks have a determined vertical margin
+	> * {
+		&:not(p, .wp-block-paragraph){
+			margin: $margin_8x auto 0 auto;
+			@media screen and (max-width: 640px) {
+				margin: $margin_4x auto 0 auto;
+			}
 		}
 	}
-
-	> .wp-block-paragraph {
+	// ? top-level paragraphs push down normally; base margin, unless its the first block on the page.
+	>p, 
+	>.wp-block-paragraph {
 		margin: $base-margin auto 0 auto;
 		&:first-child {
 			margin-top: $margin_8x;
+		}
+	}
+
+	@media screen and (max-width: 640px) {
+		// ? widen all blocks that were set to 80%
+		> * {
+			&:not(.alignfull),
+			&:not(.is-reusable) {
+				max-width: 90%;
+			}
 		}
 	}
 }

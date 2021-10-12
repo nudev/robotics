@@ -17,38 +17,46 @@
 			'keywords'  => ['stats', 'nustart'],
 			'content'     => '
 				<!-- wp:group {"className":"nu_pattern-is_stat_highlight\u002d\u002dis_type_b"} -->
-				<div class="wp-block-group nu_pattern-is_stat_highlight--is_type_b"><!-- wp:columns -->
+				<div id="stat-type-b" class="wp-block-group nu_pattern-is_stat_highlight--is_type_b"><!-- wp:heading {"textAlign":"center","level":3} -->
+				<h3 class="has-text-align-center">Elit Condimentum Purus Justo Fermentum</h3>
+				<!-- /wp:heading -->
+				
+				<!-- wp:paragraph {"align":"center","fontSize":"larger"} -->
+				<p class="has-text-align-center has-larger-font-size">Vivamus sagittis lacus vel augue laoreet rutrum faucibus dolor auctor. Cras mattis consectetur purus sit amet fermentum.</p>
+				<!-- /wp:paragraph -->
+				
+				<!-- wp:columns -->
 				<div class="wp-block-columns"><!-- wp:column -->
 				<div class="wp-block-column"><!-- wp:heading {"textAlign":"center","level":1,"className":"is-style-display"} -->
-				<h1 class="has-text-align-center is-style-display">100</h1>
+				<h1 class="has-text-align-center is-style-display"><strong>97</strong></h1>
 				<!-- /wp:heading -->
 				
-				<!-- wp:paragraph -->
-				<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc feugiat nisl lacus, sed tristique orci finibus sit amet. Mauris et aliquet ex. Donec rutrum nisl sit amet enim tristique lobortis. Pellentesque convallis molestie felis a accumsan. Fusce augue felis, venenatis sed justo eu, gravida mollis elit.</p>
+				<!-- wp:paragraph {"align":"center"} -->
+				<p class="has-text-align-center">Elit Condimentum Purus Justo Fermentum</p>
 				<!-- /wp:paragraph --></div>
 				<!-- /wp:column -->
 				
 				<!-- wp:column -->
 				<div class="wp-block-column"><!-- wp:heading {"textAlign":"center","level":1,"className":"is-style-display"} -->
-				<h1 class="has-text-align-center is-style-display">100</h1>
+				<h1 class="has-text-align-center is-style-display"><strong>100</strong></h1>
 				<!-- /wp:heading -->
 				
-				<!-- wp:paragraph -->
-				<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc feugiat nisl lacus, sed tristique orci finibus sit amet. Mauris et aliquet ex. Donec rutrum nisl sit amet enim tristique lobortis. Pellentesque convallis molestie felis a accumsan. Fusce augue felis, venenatis sed justo eu, gravida mollis elit.</p>
+				<!-- wp:paragraph {"align":"center"} -->
+				<p class="has-text-align-center">Elit Condimentum Purus Justo Fermentum</p>
 				<!-- /wp:paragraph --></div>
 				<!-- /wp:column -->
 				
 				<!-- wp:column -->
 				<div class="wp-block-column"><!-- wp:heading {"textAlign":"center","level":1,"className":"is-style-display"} -->
-				<h1 class="has-text-align-center is-style-display">100</h1>
+				<h1 class="has-text-align-center is-style-display"><strong>38</strong></h1>
 				<!-- /wp:heading -->
 				
-				<!-- wp:paragraph -->
-				<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc feugiat nisl lacus, sed tristique orci finibus sit amet. Mauris et aliquet ex. Donec rutrum nisl sit amet enim tristique lobortis. Pellentesque convallis molestie felis a accumsan. Fusce augue felis, venenatis sed justo eu, gravida mollis elit.</p>
+				<!-- wp:paragraph {"align":"center"} -->
+				<p class="has-text-align-center">Elit Condimentum Purus Justo Fermentum</p>
 				<!-- /wp:paragraph --></div>
 				<!-- /wp:column --></div>
 				<!-- /wp:columns --></div>
-				<!-- /wp:group -->
+				<!-- /wp:group -->			
 			',
 		)
 	); 

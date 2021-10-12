@@ -29,8 +29,8 @@
 				
 				<!-- wp:columns -->
 				<div class="wp-block-columns"><!-- wp:column -->
-				<div class="wp-block-column"><!-- wp:image {"align":"center","id":545,"sizeSlug":"thumbnail","linkDestination":"none","className":"is-style-rounded"} -->
-				<div class="wp-block-image is-style-rounded"><figure class="aligncenter size-thumbnail"><img src="http://nu-start.local/wp-content/uploads/1024x768-edited-150x150.png" alt="" class="wp-image-545"/></figure></div>
+				<div class="wp-block-column"><!-- wp:image {"align":"center","sizeSlug":"large","linkDestination":"none","className":"is-style-default"} -->
+				<div class="wp-block-image is-style-default"><figure class="aligncenter size-large"><img src="'.get_template_directory_uri().'/__lib/img/1920x1080.png" alt=""/></figure></div>
 				<!-- /wp:image -->
 				
 				<!-- wp:heading {"level":4} -->
@@ -43,9 +43,12 @@
 				<!-- /wp:column -->
 				
 				<!-- wp:column -->
-				<div class="wp-block-column"><!-- wp:image {"align":"center","id":545,"sizeSlug":"thumbnail","linkDestination":"none","className":"is-style-rounded"} -->
-				<div class="wp-block-image is-style-rounded"><figure class="aligncenter size-thumbnail"><img src="http://nu-start.local/wp-content/uploads/1024x768-edited-150x150.png" alt="" class="wp-image-545"/></figure></div>
+				<div class="wp-block-column">
+				<!-- wp:image {"align":"center","sizeSlug":"large","linkDestination":"none","className":"is-style-default"} -->
+				<div class="wp-block-image is-style-default"><figure class="aligncenter size-large"><img src="'.get_template_directory_uri().'/__lib/img/1920x1080.png" alt=""/></figure></div>
 				<!-- /wp:image -->
+				
+				
 				
 				<!-- wp:heading {"level":4} -->
 				<h4>Nunc ac nisi at nisi efficitur volutpat.</h4>
@@ -57,8 +60,8 @@
 				<!-- /wp:column -->
 				
 				<!-- wp:column -->
-				<div class="wp-block-column"><!-- wp:image {"align":"center","id":545,"sizeSlug":"thumbnail","linkDestination":"none","className":"is-style-rounded"} -->
-				<div class="wp-block-image is-style-rounded"><figure class="aligncenter size-thumbnail"><img src="http://nu-start.local/wp-content/uploads/1024x768-edited-150x150.png" alt="" class="wp-image-545"/></figure></div>
+				<div class="wp-block-column"><!-- wp:image {"align":"center","sizeSlug":"large","linkDestination":"none","className":"is-style-default"} -->
+				<div class="wp-block-image is-style-default"><figure class="aligncenter size-large"><img src="'.get_template_directory_uri().'/__lib/img/1920x1080.png" alt=""/></figure></div>
 				<!-- /wp:image -->
 				
 				<!-- wp:heading {"level":4} -->
