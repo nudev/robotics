@@ -155,12 +155,9 @@
             },
             "post_type": [
                 "nu_people",
-                "post",
                 "nu_events",
-                "nu_programs",
-                "nu_faces",
-                "page",
-                "nu_component-demos"
+                "nu_news",
+                "post"
             ],
             "taxonomy": "",
             "filters": [
@@ -219,13 +216,10 @@
                         "id": ""
                     },
                     "post_type": [
-                        "post",
                         "nu_events",
                         "nu_people",
-                        "nu_component-demos",
-                        "nu_initiatives",
-                        "nu_locations",
-                        "nu_programs"
+                        "nu_news",
+                        "post"
                     ],
                     "field_type": "select",
                     "max": "",
@@ -515,7 +509,7 @@
     "acfe_display_title": "",
     "acfe_meta": "",
     "acfe_note": "",
-    "modified": 1633878931,
+    "modified": 1634060362,
     "acfe_categories": {
         "acf-block": "ACF Block"
     }
