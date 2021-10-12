@@ -76,7 +76,7 @@ class PostsGrid
 		$is_autoselect = !empty( self::$post_fields['options']['autoselect'] ) ? true : false;
 
 		// todo: refactor these methods
-		if( $is_autoselect ){
+		if( !empty($is_autoselect) ){
 			$this->_build_auto_query( self::$post_fields['autoselect_posts']['post_type'] );
 		}
 		else if( !$is_autoselect && !empty(self::$post_fields['select_posts']) ){
@@ -184,7 +184,7 @@ class PostsGrid
 	private function _build_manual_query(){
 		
 		// 
-		$this->$wp_query_args = [
+		$this->wp_query_args = [
 			'post_type'			=>		'any',
 			'post_status' 		=> 		'publish',
 			'posts_per_page' 	=> 		!empty( self::$post_fields['options']['pagination'] ) ? self::$post_fields['options']['per_page'] : 12,
@@ -193,7 +193,7 @@ class PostsGrid
 			'order'				=>		'ASC',
 			'orderby'			=>		'post__in',
 		];
-		$this->wp_query = new WP_Query($this->$wp_query_args);
+		$this->wp_query = new WP_Query($this->wp_query_args);
 		
 	}
 	
